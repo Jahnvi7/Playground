@@ -12,7 +12,7 @@ def play_game():
     d = input("Enter difficulty (Easy/Hard) : ").strip().lower()
     a = 10 if d == "easy" else 5
     while True:
-        if d not in ["easy", "hard", "e" ,"h"]:
+        if d not in ["easy", "hard"]:
             print("⚠️ Invalid difficulty. Please choose 'Easy' or 'Hard'.")
             d = input("Enter difficulty (Easy/Hard) : ").strip().lower()
             a = 10 if d == "easy" else 5
