@@ -8,6 +8,6 @@ Inside, you’ll find:
 - GUI and web experiments  
 - Random code snippets and trials
 
-Not perfect, just progress. 🌱
+Not perfect, just progress. 🌱 Thanks for reading :)
 
 > Learning one line of code at a time.
