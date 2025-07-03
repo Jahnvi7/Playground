@@ -1,4 +1,8 @@
 import random
+from Score import ScoreManager
+
+score = ScoreManager()
+a = 1
 
 def SWG():
     s, w, g = 1, -1, 0
@@ -25,11 +29,19 @@ def SWG():
         print("💥 You lose!")
     else:
         print("🎉 You won!")
+        points = a * 10  # Reward: more attempts left = more points
+        score.add_points(points)
+        print(f"You earned {points} points!")
 
 # Loop to play again
 while True:
     SWG()
     again = input("Do you want to play again? (yes/no): ").strip().lower()
-    if again not in ['yes', 'y']:
+    if again != 'yes':
+        print("\n🎯 Final Score:", score.get_score())
+        if score.update_high_score():
+            print("🎉 New High Score:", score.get_high_score())
+        else:
+            print("🏆 High Score remains:", score.get_high_score())
         print("👋 Thanks for playing! See you next time.")
         break
